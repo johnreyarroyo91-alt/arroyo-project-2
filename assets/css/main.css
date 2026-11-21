@@ -19,40 +19,40 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #10154c; /* KCC deep navy headings */
-  --accent-color: #1a237e; /* KCC royal blue */
-  --kcc-gold: #d4af37;
-  --kcc-gold-dark: #9a7209;
-  --kcc-gold-deep: #745100;
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #FFFFFF; /* Background color for the entire website, including individual sections */
+  --default-color: #172B70; /* Default text color */
+  --heading-color: #172B70;
+  --accent-color: #172B70;
+  --kcc-gold: #F6CB45;
+  --kcc-gold-dark: #F6CB45;
+  --kcc-gold-deep: #F6CB45;
+  --surface-color: #FFFFFF; /* Surface color for cards and boxed elements */
+  --contrast-color: #FFFFFF; /* Contrast color for text */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #272828;  /* The default color of the main navmenu links */
-  --nav-hover-color: #1a237e; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #9a7209; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #172B70; /* The default color of the main navmenu links */
+  --nav-hover-color: #172B70; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #FFFFFF; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #FFFFFF; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #172B70; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #F6CB45; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
+  --background-color: #F3F5FA;
+  --surface-color: #FFFFFF;
 }
 
 .dark-background {
-  --background-color: #10154c;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #151c65;
-  --contrast-color: #ffffff;
+  --background-color: #172B70;
+  --default-color: #FFFFFF;
+  --heading-color: #FFFFFF;
+  --surface-color: #172B70;
+  --contrast-color: #FFFFFF;
 }
 
 /* Smooth scroll */
@@ -252,7 +252,7 @@ h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: #10154c;
+  color: #172B70;
   background: var(--kcc-gold);
   font-size: 14px;
   padding: 8px 25px;
@@ -263,7 +263,7 @@ h6 {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: #10154c;
+  color: #172B70;
   background: color-mix(in srgb, var(--kcc-gold), white 15%);
 }
 
@@ -528,7 +528,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: #ffffff;
-  background-color: #10154c;
+  background-color: #172B70;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -851,7 +851,7 @@ body::before {
   z-index: 1000;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--kcc-gold-deep), var(--kcc-gold), var(--kcc-gold-deep));
+  background: #F6CB45;
 }
 
 .section-title h2::after {
@@ -879,7 +879,7 @@ body::before {
   overflow: hidden;
   background:
     linear-gradient(120deg, rgba(116, 81, 0, 0.18) 0 22%, transparent 22% 100%),
-    linear-gradient(90deg, #10154c 0%, #151c65 68%, #745100 100%);
+    linear-gradient(90deg, #172B70 0%, #172B70 68%, #F6CB45 100%);
 }
 
 .page-title .heading::after {
@@ -889,7 +889,7 @@ body::before {
   bottom: -55px;
   width: 170px;
   height: 170px;
-  border: 18px solid rgba(212, 175, 55, 0.16);
+  border: 18px solid rgba(246, 203, 69, 0.16);
   border-radius: 50%;
 }
 
@@ -903,14 +903,14 @@ body::before {
   letter-spacing: 0;
 }
 
-.about-page .page-title .heading { background: linear-gradient(125deg, #10154c 0 68%, #745100 68% 100%); }
-.courses-page .page-title .heading { background: linear-gradient(135deg, #745100 0 10%, #10154c 10% 85%, #745100 85%); }
-.course-details-page .page-title .heading { background: linear-gradient(90deg, #10154c 0%, #745100 70%, #9a7209 100%); }
-.events-page .page-title .heading { background: radial-gradient(circle at 82% 40%, rgba(212,175,55,.28), transparent 15%), linear-gradient(110deg, #10154c 0%, #745100 100%); }
-.pricing-page .page-title .heading { background: linear-gradient(90deg, #745100 0%, #10154c 22% 78%, #745100 100%); }
-.trainers-page .page-title .heading { background: linear-gradient(145deg, #10154c 0 58%, #745100 58% 72%, #10154c 72%); }
-.contact-page .page-title .heading { background: linear-gradient(90deg, #745100 0%, #10154c 38%, #10154c 100%); }
-.starter-page-page .page-title .heading { background: linear-gradient(135deg, #10154c 0 76%, #745100 76%); }
+.about-page .page-title .heading { background: linear-gradient(125deg, #172B70 0 68%, #F6CB45 68% 100%); }
+.courses-page .page-title .heading { background: linear-gradient(135deg, #F6CB45 0 10%, #172B70 10% 85%, #F6CB45 85%); }
+.course-details-page .page-title .heading { background: linear-gradient(90deg, #172B70 0%, #172B70 70%, #F6CB45 100%); }
+.events-page .page-title .heading { background: linear-gradient(110deg, #172B70 0%, #172B70 72%, #F6CB45 72% 100%); }
+.pricing-page .page-title .heading { background: linear-gradient(90deg, #F6CB45 0%, #172B70 22% 78%, #F6CB45 100%); }
+.trainers-page .page-title .heading { background: linear-gradient(145deg, #172B70 0 58%, #F6CB45 58% 72%, #172B70 72%); }
+.contact-page .page-title .heading { background: linear-gradient(90deg, #F6CB45 0%, #172B70 38%, #172B70 100%); }
+.starter-page-page .page-title .heading { background: linear-gradient(135deg, #172B70 0 76%, #F6CB45 76%); }
 
 .index-page .hero-facts,
 .about-page .mission-grid,
@@ -1022,7 +1022,7 @@ section,
 
 .hero:before {
   content: "";
-  background: linear-gradient(90deg, rgba(16, 21, 76, 0.94) 0%, rgba(16, 21, 76, 0.72) 52%, rgba(16, 21, 76, 0.12) 100%);
+  background: linear-gradient(90deg, rgba(23, 43, 112, 0.94) 0%, rgba(23, 43, 112, 0.72) 52%, rgba(23, 43, 112, 0.12) 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1097,14 +1097,14 @@ section,
 
 .hero .btn-primary-action {
   background: var(--kcc-gold);
-  color: #10154c;
+  color: #172B70;
   border-color: var(--kcc-gold);
 }
 
 .hero .btn-primary-action:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #10154c;
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #172B70;
 }
 
 .hero .btn-secondary-action {
@@ -1114,9 +1114,9 @@ section,
 }
 
 .hero .btn-secondary-action:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #10154c;
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #172B70;
 }
 
 .hero-facts {
@@ -1132,7 +1132,7 @@ section,
   display: flex;
   flex-direction: column;
   padding: 14px 18px;
-  background: rgba(16, 21, 76, 0.72);
+  background: rgba(23, 43, 112, 0.72);
 }
 
 .hero-facts strong {
@@ -1154,7 +1154,7 @@ section,
   }
 
   .hero:before {
-    background: rgba(16, 21, 76, 0.82);
+    background: rgba(23, 43, 112, 0.82);
   }
 
   .hero h2 {
@@ -1342,7 +1342,7 @@ section,
 
 .about .content .read-more:hover {
   background: var(--kcc-gold);
-  color: #10154c;
+  color: #172B70;
 }
 
 .about .content .read-more:hover i {
@@ -1506,7 +1506,7 @@ section,
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 88%);
   border-radius: 6px;
   position: relative;
-  box-shadow: 0 8px 24px rgba(16, 21, 76, 0.06);
+  box-shadow: 0 8px 24px rgba(23, 43, 112, 0.06);
 }
 
 .features .features-item i {
@@ -1539,7 +1539,7 @@ section,
 .features .features-item:hover {
   transform: translateY(-4px);
   border-color: var(--kcc-gold);
-  box-shadow: 0 12px 28px rgba(16, 21, 76, 0.12);
+  box-shadow: 0 12px 28px rgba(23, 43, 112, 0.12);
 }
 
 .features .features-item:hover h3 a {
@@ -1561,14 +1561,14 @@ section,
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 88%);
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 10px 28px rgba(16, 21, 76, 0.07);
+  box-shadow: 0 10px 28px rgba(23, 43, 112, 0.07);
   transition: 0.25s ease;
 }
 
 .courses .course-item:hover {
   transform: translateY(-5px);
   border-color: var(--kcc-gold);
-  box-shadow: 0 16px 34px rgba(16, 21, 76, 0.12);
+  box-shadow: 0 16px 34px rgba(23, 43, 112, 0.12);
 }
 
 .courses .course-item > img {
