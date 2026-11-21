@@ -23,8 +23,9 @@
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #10154c; /* KCC deep navy headings */
   --accent-color: #1a237e; /* KCC royal blue */
-  --kcc-gold: #f6d24b;
+  --kcc-gold: #d4af37;
   --kcc-gold-dark: #9a7209;
+  --kcc-gold-deep: #745100;
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -835,6 +836,107 @@ h6 {
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/* Dark-gold page identities */
+body {
+  --page-gold: var(--kcc-gold-dark);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--kcc-gold-deep), var(--kcc-gold), var(--kcc-gold-deep));
+}
+
+.section-title h2::after {
+  background: var(--kcc-gold-dark);
+}
+
+.header {
+  border-bottom: 1px solid color-mix(in srgb, var(--kcc-gold-dark), transparent 82%);
+}
+
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  background: var(--kcc-gold-dark);
+  color: #ffffff;
+}
+
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  background: var(--kcc-gold-deep);
+  color: #ffffff;
+}
+
+.page-title .heading {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(116, 81, 0, 0.18) 0 22%, transparent 22% 100%),
+    linear-gradient(90deg, #10154c 0%, #151c65 68%, #745100 100%);
+}
+
+.page-title .heading::after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  bottom: -55px;
+  width: 170px;
+  height: 170px;
+  border: 18px solid rgba(212, 175, 55, 0.16);
+  border-radius: 50%;
+}
+
+.page-title nav {
+  background: var(--kcc-gold-deep);
+}
+
+.page-title .heading h1 {
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0;
+}
+
+.about-page .page-title .heading { background: linear-gradient(125deg, #10154c 0 68%, #745100 68% 100%); }
+.courses-page .page-title .heading { background: linear-gradient(135deg, #745100 0 10%, #10154c 10% 85%, #745100 85%); }
+.course-details-page .page-title .heading { background: linear-gradient(90deg, #10154c 0%, #745100 70%, #9a7209 100%); }
+.events-page .page-title .heading { background: radial-gradient(circle at 82% 40%, rgba(212,175,55,.28), transparent 15%), linear-gradient(110deg, #10154c 0%, #745100 100%); }
+.pricing-page .page-title .heading { background: linear-gradient(90deg, #745100 0%, #10154c 22% 78%, #745100 100%); }
+.trainers-page .page-title .heading { background: linear-gradient(145deg, #10154c 0 58%, #745100 58% 72%, #10154c 72%); }
+.contact-page .page-title .heading { background: linear-gradient(90deg, #745100 0%, #10154c 38%, #10154c 100%); }
+.starter-page-page .page-title .heading { background: linear-gradient(135deg, #10154c 0 76%, #745100 76%); }
+
+.index-page .hero-facts,
+.about-page .mission-grid,
+.courses-page .course-item,
+.events-page .card,
+.pricing-page .pricing-item,
+.trainers-page .member,
+.contact-page .info-item {
+  border-color: var(--kcc-gold-dark);
+}
+
+.features .features-item:hover,
+.courses .course-item:hover,
+.trainers-index .member:hover {
+  border-color: var(--kcc-gold-dark);
+}
+
+@media (max-width: 768px) {
+  .page-title .heading {
+    padding: 58px 0;
+  }
+
+  .page-title .heading::after {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 /*--------------------------------------------------------------
